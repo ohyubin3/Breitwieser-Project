@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const Category = require('./Category');
+const Artist = require('./Artist');
 
 class Product extends Model {}
 
@@ -17,6 +17,10 @@ Product.init(
       type: DataTypes.STRING,
       allowNull: false
     },
+    product_desc: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     price: {
       type: DataTypes.DECIMAL,
       allowNull: false,
@@ -24,16 +28,24 @@ Product.init(
         isDecimal: true
       }
     },
-    category_id: {
+    stock: {
       type: DataTypes.INTEGER,
-      references: {
-        model: Category,
-        key: 'id',
+      allowNull: false,
+      default: 10,
+      validate: {
+        isNumeric: true
       }
-    },
-    filename: {
+  },
+    image_link: {
       type: DataTypes.STRING,
       allowNull: false,
+  },
+    artist_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: Artist,
+        key: 'id',
+      }
     }
   },
   {

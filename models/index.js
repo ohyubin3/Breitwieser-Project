@@ -1,31 +1,20 @@
 const Product = require('./Product');
-const Category = require('./Category');
-const Tag = require('./Tag');
-const ProductTag = require('./ProductTag');
+const Artist = require('./Artist');
+const Heat = require('./Heat');
+const ProductHeat = require('./ProductHeat');
 const User = require('./User');
 const Project = require('./Project');
 
-Product.belongsTo(Category, {
-  foreignKey: 'category_id',
+Product.belongsTo(Artist, {foreignKey: 'artist_id', onDelete: "CASCADE",
 });
 
-Category.hasMany(Product, {
-  foreignKey: 'category_id',
+Artist.hasMany(Product, {foreignKey: 'artist_id',
 });
 
-Product.belongsToMany(Tag, {
-  through: {
-    model: ProductTag,
-    unique: false,
-  },
-});
+Product.belongsToMany(Heat, {
+  through: ProductHeat, foreignKey: "product_id" });
 
-Tag.belongsToMany(Product, {
-  through: {
-    model: ProductTag,
-    unique: false,
-  },
-});
+Heat.belongsToMany(Product, { through: ProductHeat, foreignKey: "heat_id"  });
 
 User.hasMany(Project, {
   foreignKey: 'user_id',
@@ -39,9 +28,9 @@ Project.belongsTo(User, {
 
 module.exports = {
   Product,
-  Category,
-  Tag,
-  ProductTag,
+  Artist,
+  Heat,
+  ProductHeat,
   User,
   Project 
 };
