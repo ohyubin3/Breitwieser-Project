@@ -13,6 +13,9 @@ const artistData = [
   {
     artist_name: 'Leonardo Da Vinci',
   },
+  {
+    artist_name: 'Jon Kelly',
+  },
 ];
 
 const seedArtists = () => Artist.bulkCreate(artistData);
