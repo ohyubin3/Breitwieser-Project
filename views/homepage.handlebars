@@ -1,4 +1,5 @@
 <!-- Loop over each object in the projects array -->
+{{#if logged_in}}
 {{#each projects as |project| }}
 <div class="row mb-4 project">
   <div class="col-md-5">
@@ -22,3 +23,10 @@
   </div>
 </div>
 {{/each}}
+{{else}}
+    <div id="passcode" class="has-text-centered">
+      <div class="image is-inline-block">
+          <img class="is-relative" src="/img/enter.jpg"/>
+      </div>
+    </div>
+{{/if}}

@@ -1,5 +1,9 @@
-header, .project:not(:last-child) {
+header,
+.project:not(:last-child) {
   border-bottom: 1px solid #ccc;
+}
+.container {
+  margin: 0;
 }
 
 .no-button {
