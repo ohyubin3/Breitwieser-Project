@@ -1,0 +1,13 @@
+<section class="container">
+  <h3 class="title">{{product.product_name}}</h3>
+  <section class="is-flex-direction-row is-flex-wrap-wrap is-justify-content-center">
+    {{#each products as |product|}}
+   <section class="card">
+  <a href="/product/{{id}}">
+    <header>{{name}}</header>
+    <img src="/images/{{product.[0].image_link}}" alt="{{paintings.[0].description}}">
+  </a>
+</section>
+    {{/each}}
+  </section>
+</section>

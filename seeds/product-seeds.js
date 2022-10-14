@@ -8,6 +8,7 @@ const productData = [
     stock: 2,
     image_link: "https://udexx.com",
     artist_id: 1,
+    user_id: 1
   },
   {
     product_name: 'The Kiss',
@@ -16,6 +17,7 @@ const productData = [
     stock: 2,
     image_link: "https://udexx.com",
     artist_id: 2,
+    user_id: 3
   },
   {
     product_name: 'Girl with a Pearl Earring',
@@ -24,6 +26,7 @@ const productData = [
     stock: 2,
     image_link: "https://udexx.com",
     artist_id: 3,
+    user_id: 2
   },
   {
     product_name: 'Mona Lisa',
@@ -32,6 +35,7 @@ const productData = [
     stock: 2,
     image_link: "https://udexx.com",
     artist_id: 4,
+    user_id: 1
   },
   {
     product_name: 'The Last Supper',
@@ -40,6 +44,7 @@ const productData = [
     stock: 2,
     image_link: "https://udexx.com",
     artist_id: 5,
+    user_id: 3
   },
 ];
 
