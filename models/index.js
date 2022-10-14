@@ -16,12 +16,12 @@ Product.belongsToMany(Heat, {
 
 Heat.belongsToMany(Product, { through: ProductHeat, foreignKey: "heat_id"  });
 
-User.hasMany(Project, {
+User.hasMany(Product, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });
 
-Project.belongsTo(User, {
+Product.belongsTo(User, {
   foreignKey: 'user_id'
 });
 

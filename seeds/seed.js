@@ -35,6 +35,9 @@ const seedAll = async () => {
   await seedArtists();
   console.log('\n----- ARTISTS SEEDED -----\n');
 
+  await seedUser();
+  console.log('\n----- USER SEEDED -----\n');
+  
   await seedProducts();
   console.log('\n----- PRODUCTS SEEDED -----\n');
 
@@ -44,8 +47,6 @@ const seedAll = async () => {
   await seedProductHeats();
   console.log('\n----- PRODUCT HEATS SEEDED -----\n');
 
-  await seedUser();
-  console.log('\n----- USER SEEDED -----\n');
 
   await seedProject();
   console.log('\n----- PROJECT SEEDED -----\n');
