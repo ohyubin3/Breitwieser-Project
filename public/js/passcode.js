@@ -4,8 +4,6 @@ function toLoginScreen() {
 }
 
 console.log(document);
-document.addEventListener('keydown', function (event) {
+document.addEventListener('keypress', function (event) {
   console.log(event.key);
 });
-
-console.log('test global');
