@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Heat, Product, ProductHeat } = require('../../models');
+const { Heat, Product, ProductHeat, User } = require('../../models');
 
 // The `/api/heats` endpoint
 
@@ -24,7 +24,7 @@ router.get('/:id', (req, res) => {
     where: { id: req.params.id },
     include: [{
       model: Product,
-      attributes: ['id', 'product_name', 'product_desc', 'price', 'stock', 'image_link']
+      attributes: ['id', 'product_name', 'product_desc', 'price', 'stock', 'image_link', 'user_id']
     }]
     })
   .then(dataC => {

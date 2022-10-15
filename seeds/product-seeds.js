@@ -6,7 +6,8 @@ const productData = [
     product_desc: 'example',
     price: 14.99,
     stock: 2,
-    image_link: 'https://udexx.com',
+    image_link: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/800px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+
     artist_id: 1,
     user_id: 1,
   },
@@ -15,7 +16,7 @@ const productData = [
     product_desc: 'example',
     price: 90.0,
     stock: 2,
-    image_link: 'https://udexx.com',
+    image_link: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg/800px-The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg",
     artist_id: 2,
     user_id: 3,
   },
@@ -34,7 +35,9 @@ const productData = [
     product_desc: 'example',
     price: 12.99,
     stock: 2,
-    image_link: 'https://udexx.com',
+
+    image_link: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/800px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg",
+
     artist_id: 4,
     user_id: 1,
   },
