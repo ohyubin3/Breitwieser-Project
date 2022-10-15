@@ -1,46 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Breitwieser Project!</title>
+    <link
+      rel='stylesheet'
+      href='https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css'
+    />
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fund My Project!</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-
-<body>
-  <div class="flex-column justify-space-around">
-    <header class="is-danger">
-      <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">Fund My Project!</a>
-      </h1>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
-    </header>
-    <main class="is-danger">
-      <!-- Render the sub layout -->
-      {{{ body }}}
-    </main>
-    <footer>
+  <body class="has-background-success-light">
+    <div class='is-flex-direction-column is-justify-content-space-between'>
+      <header
+        class='is-flex is-justify-content-space-between has-background-success'
+      >
+        <div>
+          <h1 class='title has-text-success-dark'>
+            Breitwieser Project
+          </h1>
+          <h4 class='subtitle is-6 has-text-white'>Putting the Price in
+            Priceless</h4>
+        </div>
+        <nav>
+          {{#if logged_in}}
+            <button class='button is-link' id='profile'>"My" Art</button>
+            <button class='button is-link' id='logout'>logout</button>           
+          {{/if}}
+        </nav>
+      </header>
       
-    </footer>
-  </div>
+      <main>
+        {{{body}}}
+      </main>
+      <footer></footer>
+    </div>
 
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-<script src="/js/passcode.js"></script>
-
-</body>
-
+    {{#if logged_in}}
+      <script src='/js/logout.js'></script>
+    {{/if}}
+  </body>
 </html>
