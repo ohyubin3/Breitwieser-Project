@@ -6,45 +6,47 @@ const productData = [
     product_desc: 'example',
     price: 14.99,
     stock: 2,
-    image_link: "https://udexx.com",
+    image_link: 'https://udexx.com',
     artist_id: 1,
-    user_id: 1
+    user_id: 1,
   },
   {
     product_name: 'The Kiss',
     product_desc: 'example',
     price: 90.0,
     stock: 2,
-    image_link: "https://udexx.com",
+    image_link: 'https://udexx.com',
     artist_id: 2,
-    user_id: 3
+    user_id: 3,
   },
   {
     product_name: 'Girl with a Pearl Earring',
     product_desc: 'example',
     price: 22.99,
     stock: 2,
-    image_link: "https://udexx.com",
+    image_link:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/1665_Girl_with_a_Pearl_Earring.jpg/800px-1665_Girl_with_a_Pearl_Earring.jpg',
     artist_id: 3,
-    user_id: 2
+    user_id: 2,
   },
   {
     product_name: 'Mona Lisa',
     product_desc: 'example',
     price: 12.99,
     stock: 2,
-    image_link: "https://udexx.com",
+    image_link: 'https://udexx.com',
     artist_id: 4,
-    user_id: 1
+    user_id: 1,
   },
   {
     product_name: 'The Last Supper',
     product_desc: 'example',
     price: 29.99,
     stock: 2,
-    image_link: "https://udexx.com",
+    image_link:
+      'https://www.discoverwalks.com/blog/wp-content/uploads/2020/05/the-last-supper-restored-da-vinci_32x16-scaled.jpg',
     artist_id: 5,
-    user_id: 3
+    user_id: 3,
   },
 ];
 
