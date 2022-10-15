@@ -1,42 +1,29 @@
 <!-- Loop over each object in the projects array -->
-{{#if logged_in}} {{#each projects as |project| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_emoji}}}
-      <a href="/project/{{project.id}}">{{project.name}}</a>
-    </h2>
-    <p>
-      <span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount"
-        >{{format_amount project.needed_funding}}</span
-      >
-      needed!
-    </p>
-    <p>
-      Created by {{project.user.name}} on {{formgit pullat_date
-      project.date_created}}
-    </p>
+{{#if logged_in}}
+    <div class="container is-flex">
+  {{#each products as |product|}}
+    <section class='card'>
+      <a href='/product/{{id}}'>
+      <h3 class='title'>{{product.product_name}}</h3>
+      </a>
+        <img
+          src='{{product.image_link}}'
+          alt='{{product.product_name}}'
+          srcset=''
+        />
+        <h3>{{artist.artist_name}}</h3>
+    </section>
+  {{/each}}
+    </div>
+{{else}}
+  <div class='has-text-centered'>
+    <div class='image is-inline-block'>
+      <img class='is-relative' src='/img/enter.jpg' />
+    </div>
   </div>
-  <div class="col-md-7">
-    <p>{{project.description}}</p>
-  </div>
-</div>
-{{/each}} {{else}}
-<div class="has-text-centered">
-  <div class="image is-inline-block">
-    <img class="is-relative" src="/img/enter.jpg" />
-  </div>
-</div>
-<script>
-  typed_word = '';
-  document.addEventListener('keypress', function (event) {
-    typed_word = typed_word + event.key;
-    if (typed_word === 'password') {
-      window.location.replace('/login');
-    }
-  });
-</script>
+  <script>
+    typed_word = ''; document.addEventListener('keypress', function (event) {
+    typed_word = typed_word + event.key; if (typed_word === 'password') {
+    window.location.replace('/login'); } });
+  </script>
 {{/if}}
