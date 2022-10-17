@@ -1,38 +1,22 @@
-<div class="text-center">
-  <h2>{{name}}</h2>
-  <p>{{{get_emoji}}}</p>
-  <p>{{description}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
-    needed
-  </p>
-  <p>
-    <button class="btn btn-primary">Fund this Project!</button>
-  </p>
-</div>
+<div class="is-flex is-justify-content-center">
+<div class='card has-text-centered'>
 
-{{!-- 
-<div class="card has-text-centered">
-  <img src="https://unsplash.it/600/400" />
-  <h2>{{Product.product_name}}</h2>
-  <br />
-  <p>{{Product.product_desc}}</p>
-  <br />
-  <p>Posted by {{user.name}} on {{format_date date_created}}</p>
-  <br />
-  <p>
-    The price of this "aquired" art piece is
-    <span class="is-size-2">{{Product.price}}</span>.
-  </p>
-  <br />
-  <p>The Heat level of this art piece is {{Heat.heat_name}} level.</p>
-  <br />
-  <br />
-  <br />
-  <p>
-    Click <button class="button is-link" href="/checkout">HERE</button> to take
-    this art with you TODAY!
-  </p>
-</div> --}}
+  <h2 class="title has-text-success-dark">{{product_name}}</h2>
+  <img src='{{image_link}}' alt='{{product_name}}' srcset='' />
+  <h3 class="subtitle has-text-success-dark">Posted by {{user.name}} </h3>
+  <h3 class="subtitle has-text-success-dark">{{product_desc}}</h3>
+
+  <h3 class="subtitle has-text-success-dark">
+    The price of this "aquired" art piece is:
+  </h3>
+  
+  <h3 class="subtitle has-text-success-dark">${{price}}</h3>
+
+  <h3 class="subtitle has-text-success-dark">The Heat level of this art piece is:</h3>
+  <h3 class="subtitle has-text-success-dark">{{heat.0.heat_name}}</h3>
+  <h3 class="subtitle has-text-success-dark">
+    Click here to take this art with you TODAY!
+  </h3>
+  <button  class='button is-link' href='/payment'>HERE</button>
+</div>
+</div>

@@ -21,7 +21,7 @@ Heat.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'Heat',
+    modelName: 'heat',
   }
 );
 
