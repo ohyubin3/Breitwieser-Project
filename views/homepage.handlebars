@@ -1,17 +1,16 @@
-<!-- Loop over each object in the projects array -->
 {{#if logged_in}}
-    <div class="container is-flex">
+    <div class="container is-flex is-justify-content-space-evenly is-flex-wrap-wrap is-multiline">
   {{#each products as |product|}}
-    <section class='card'>
+    <section class="card mx-2">
       <a href='/product/{{id}}'>
       <h3 class='title'>{{product.product_name}}</h3>
-      </a>
         <img
           src='{{product.image_link}}'
           alt='{{product.product_name}}'
           srcset=''
         />
         <h3>{{artist.artist_name}}</h3>
+      </a>
     </section>
   {{/each}}
     </div>

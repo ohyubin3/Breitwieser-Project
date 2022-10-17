@@ -17,15 +17,15 @@
         class='is-flex is-justify-content-space-between has-background-success'
       >
         <div>
-          <h1 class='title has-text-success-dark'>
+          <a href="/" class='title has-text-success-dark'>
             Breitwieser Project
-          </h1>
-          <h4 class='subtitle is-6 has-text-white'>Putting the Price in
+          </a>
+          <h4 class='subtitle is-6 has-text-white mt-1'>Putting the Price in
             Priceless</h4>
         </div>
         <nav>
           {{#if logged_in}}
-            <button class='button is-link' id='profile'>"My" Art</button>
+            <a href="/profile" class='button is-link' id='profile'>"My" Art</a>
             <button class='button is-link' id='logout'>logout</button>           
           {{/if}}
         </nav>

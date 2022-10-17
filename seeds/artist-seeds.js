@@ -14,7 +14,7 @@ const artistData = [
     artist_name: 'Leonardo Da Vinci',
   },
   {
-    artist_name: 'Jon Kelly',
+    artist_name: 'Claude Monet',
   },
 ];
 
