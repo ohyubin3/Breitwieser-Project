@@ -5,8 +5,8 @@ const newFormHandler = async (event) => {
   const price = document.querySelector('#product-price').value.trim();
   const description = document.querySelector('#product-desc').value.trim();
   const artist = document.querySelector('#artistDropdown').value.trim();
-  const heat = document.querySelector('#heatDropdown').value.trim();
-  const userID = document.querySelector('#user-id').value;
+  const heat = document.querySelector('#heatDropdown').value;
+  const userID = document.querySelector('#user-id').attributes.value.value;
   const link = document.querySelector('#image-link').value.trim();
 
   if (name && price && description && artist && heat && link) {
@@ -25,12 +25,12 @@ const newFormHandler = async (event) => {
         'Content-Type': 'application/json',
       },
     });
+    console.log(response);
     if (response.ok) {
       document.location.replace('/profile');
     } else {
       alert('Failed to create product');
     }
-    console.log(response);
   }
 };
 

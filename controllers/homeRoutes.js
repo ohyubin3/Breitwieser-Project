@@ -72,8 +72,6 @@ router.get('/profile', withAuth, async (req, res) => {
 
     const heatData = await Heat.findAll({});
     const heats = heatData.map((heat) => heat.get({ plain: true }));
-    console.log(artists);
-    console.log(heats);
 
     res.render('profile', {
       ...user,
