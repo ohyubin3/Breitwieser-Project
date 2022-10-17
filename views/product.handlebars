@@ -1,22 +1,26 @@
-<div class="is-flex is-justify-content-center">
-<div class='card has-text-centered'>
+<div class='is-flex is-justify-content-center'>
+  <div class='card has-text-centered'>
 
-  <h2 class="title has-text-success-dark">{{product_name}}</h2>
-  <img src='{{image_link}}' alt='{{product_name}}' srcset='' />
-  <h3 class="subtitle has-text-success-dark">Posted by {{user.name}} </h3>
-  <h3 class="subtitle has-text-success-dark">{{product_desc}}</h3>
+    <h2 class='title has-text-success-dark'>{{product_name}}</h2>
+    <img src='{{image_link}}' alt='{{product_name}}' srcset='' />
+    <h3 class='subtitle has-text-success-dark'>Posted by {{user.name}} </h3>
+    <h3 class='subtitle has-text-success-dark'>{{product_desc}}</h3>
 
-  <h3 class="subtitle has-text-success-dark">
-    The price of this "aquired" art piece is:
-  </h3>
-  
-  <h3 class="subtitle has-text-success-dark">${{price}}</h3>
+    <h3 class='subtitle has-text-success-dark'>
+      The price of this "aquired" art piece is:
+    </h3>
 
-  <h3 class="subtitle has-text-success-dark">The Heat level of this art piece is:</h3>
-  <h3 class="subtitle has-text-success-dark">{{heat.0.heat_name}}</h3>
-  <h3 class="subtitle has-text-success-dark">
-    Click here to take this art with you TODAY!
-  </h3>
-  <button  class='button is-link' href='/payment'>HERE</button>
-</div>
+    <h3 class='subtitle has-text-success-dark'>${{price}}</h3>
+
+    <h3 class='subtitle has-text-success-dark'>The Heat level of this art piece
+      is:</h3>
+    <h3 class='subtitle has-text-success-dark'>{{heat.0.heat_name}}</h3>
+    <h3 class='subtitle has-text-success-dark'>
+      Click here to take this art with you TODAY!
+    </h3>
+    <a
+      class='button is-link'
+      href='https://buy.stripe.com/6oEdRo88RfKA3jGaEE'
+    >HERE</a>
+  </div>
 </div>

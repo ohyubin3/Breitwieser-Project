@@ -31,9 +31,36 @@
     <h3>Amount sold:</h3>
   </div> }}
   {{! button to go to posting art page }}
-  <div>
-    <button class='button is-link mt-5' type='button'>Add "new" art for sale</button>
-  </div>
 
+
+<br>
+<br>
+<br>
+
+  <div class="has-text-success-dark container">
+    <h3 class="title mb-6 has-text-centered">Post your new "acquired" art for sale:</h3>
+  </div>
+    <form class="card has-text-centered" id="submit-art">
+      <div>
+        <label for="product-name">Name of the painting:</label>
+        <input class="form-input" type="text" id="product-name" name="product-name" />
+      </div>
+      <div>
+        <label for="product-price">Price:</label>
+        <input class="form-input" type="number" id="product-price" name="product-price" />
+      </div>
+      <div>
+        <label for="product-desc">description:</label>
+        <textarea class="form-input" id="product-desc" name="product-desc"></textarea>
+      </div>
+      <div>
+        <label for="image-link">link to a picture of the artwork:</label>
+        <textarea class="form-input" id="image-link" name="image-link"></textarea>
+      </div>
+    <div>
+      <button class='button is-link mt-5' type='submit'>Add "new" art for sale</button>
+    </div>
+    </form>
+  </div>
 </div>
 <script src='./js/profile.js'></script>
