@@ -1,9 +1,10 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
-
   const name = document.querySelector('#product-name').value.trim();
-  const needed_funding = document.querySelector('#product-funding').value.trim();
+  const needed_funding = document
+    .querySelector('#product-funding')
+    .value.trim();
   const description = document.querySelector('#product-desc').value.trim();
 
   if (name && needed_funding && description) {
@@ -38,11 +39,10 @@ const delButtonHandler = async (event) => {
   }
 };
 
-
 document
   .querySelector('.new-product-form')
   .addEventListener('submit', newFormHandler);
 
 document
-  .querySelector('.product-list')
+  .querySelector('.container')
   .addEventListener('click', delButtonHandler);
