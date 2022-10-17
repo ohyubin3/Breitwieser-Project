@@ -1,36 +1,39 @@
-<div class="is-flex-direction-row has-text-success-dark">
+<div class='is-flex-direction-row has-text-success-dark'>
   <div>
-    <h2 class="title mb-6 has-text-centered">{{name}}'s totally legitimate art dealings </h2>
+    <h2 class='title mb-6 has-text-centered'>{{name}}'s totally legitimate art
+      dealings
+    </h2>
   </div>
   {{#if products.length}}
-    <div class="has-text-success-dark">
-      <h3 class="title">Current works for sale:</h3>
+    <div class='has-text-success-dark container'>
+      <h3 class='title'>Current works for sale:</h3>
 
       {{#each products as |product|}}
-      <div class="card">
-        <div class="is-flex-direction-column">
-         <h3 class='title mb-2'>{{product.product_name}}</h3>
-        </div>
-         <img
-          src='{{product.image_link}}'
-          alt='{{product.product_name}}'
-          srcset=''
-        />
-        <div>
-          <button class="button is-link" data-id='{{product.id}}'>I'm keeping it</button>
-        </div>
+        <div class='card'>
+          <div class='is-flex-direction-column'>
+            <h3 class='title mb-2'>{{product.product_name}}</h3>
+          </div>
+          <img
+            src='{{product.image_link}}'
+            alt='{{product.product_name}}'
+            srcset=''
+          />
+          <div>
+            <button class='button is-link' data-id='{{product.id}}'>I'm keeping
+              it</button>
+          </div>
         </div>
       {{/each}}
     </div>
   {{/if}}
-{{!-- need to see if showing transaction history is possible --}}
-  {{!-- <div>
+  {{! need to see if showing transaction history is possible }}
+  {{! <div>
     <h3>Amount sold:</h3>
-  </div> --}}
-{{!-- button to go to posting art page --}}
-<div>
-  <button class="button is-link mt-5"  type="button">Add "new" art for sale</button>
-</div>
+  </div> }}
+  {{! button to go to posting art page }}
+  <div>
+    <button class='button is-link mt-5' type='button'>Add "new" art for sale</button>
+  </div>
 
 </div>
 <script src='./js/profile.js'></script>
