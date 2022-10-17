@@ -3,7 +3,7 @@ const { Product } = require('../models');
 const productData = [
   {
     product_name: 'Starry Night',
-    product_desc: "A moderately abstract landscape painting (1889) of an expressive night sky over a small hillside village. Created by one of Dutch artist Vincent van Gogh's most celebrated works. And my cousin Tony is totally the guy who gave it to me",
+    product_desc: "An expressive night sky over a small hillside village. My cousin Tony is totally the guy who gave it to me",
     price: 495265746,
     stock: 2,
     image_link: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/800px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
@@ -13,7 +13,7 @@ const productData = [
   },
   {
     product_name: 'The Kiss',
-    product_desc: "The painting depicts a couple embracing in a field of flowers. The man is bent over the woman, and she, clinging tightly to him, awaits his kiss. In terms of ornamentation, the male figure is characterized by square and rectangular forms, while for the female, soft lines and floral patterns are dominant. Which is why it was so weird that I found it at a garage sale",
+    product_desc: "The painting depicts a couple embracing in a field of flowers. Which is why it was so weird that I found it at a garage sale",
     price: 468478400,
     stock: 2,
     image_link: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg/800px-The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg",
@@ -22,7 +22,7 @@ const productData = [
   },
   {
     product_name: 'Girl with a Pearl Earring',
-    product_desc: "Vermeer's most famous painting. It is not a portrait, but a 'tronie', which is a painting of an imaginary figure. This painting has been in my family for a long time, problem is she looks just like my ex wife so she's got to go",
+    product_desc: "Vermeer's most famous painting of an imaginary figure. This painting has been in my family for a long time, problem is she looks just like my ex wife so she's got to go",
     price: 426548169,
     stock: 2,
     image_link:
@@ -32,7 +32,7 @@ const productData = [
   },
   {
     product_name: 'Mona Lisa',
-    product_desc: "The Mona Lisa is an oil painting by Italian artist, inventor, and writer Leonardo da Vinci. Likely completed in 1506, the piece features a portrait of a seated woman set against an imaginary landscape. It was my grandmother's prized possession and she asked me to sell it for her",
+    product_desc: "An oil painting by Italian artist featuring a portrait of a seated woman set against an imaginary landscape. It was my grandmother's prized possession and she asked me to sell it for her",
     price: 1715613299,
     stock: 2,
 
@@ -43,7 +43,7 @@ const productData = [
   },
   {
     product_name: 'The Last Supper',
-    product_desc: " a snapshot of the moment Christ tells his Apostles that one of them will betray him; “Very truly I tell you, one of you is going to betray me,” (Gospel of John 13:21). The painting depicts each apostle reacting in his own unique way. All I know is i didn't betray anyone to get it.",
+    product_desc: " a snapshot of the moment Christ tells his Apostles that one of them will betray him. All I know is i didn't betray anyone to get it.",
     price: 889746959,
     stock: 2,
     image_link:
