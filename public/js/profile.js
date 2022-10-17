@@ -39,7 +39,9 @@ const delButtonHandler = async (event) => {
   }
 };
 
-// document.querySelectorAll('.').addEventListener('submit', newFormHandler);
+document
+  .querySelectorAll('.container')
+  .addEventListener('submit', newFormHandler);
 
 document
   .querySelector('.container')
