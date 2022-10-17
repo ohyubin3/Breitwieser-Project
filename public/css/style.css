@@ -26,3 +26,9 @@ header,
   font-weight: bold;
   margin-left: -5px;
 }
+
+.card{
+  width: 33%;
+  margin: 1%;
+  padding: 1%;
+}

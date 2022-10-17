@@ -1,3 +1,19 @@
+<div class="text-center">
+  <h2>{{name}}</h2>
+  <p>{{{get_emoji}}}</p>
+  <p>{{description}}</p>
+  <p>Created by {{user.name}} on {{format_date date_created}}</p>
+  <p>
+    <span for="img" aria-label="money">💲</span>
+    <span class="dollar-amount">{{format_amount needed_funding}}</span>
+    needed
+  </p>
+  <p>
+    <button class="btn btn-primary">Fund this Project!</button>
+  </p>
+</div>
+
+{{!-- 
 <div class="card has-text-centered">
   <img src="https://unsplash.it/600/400" />
   <h2>{{Product.product_name}}</h2>
@@ -19,4 +35,4 @@
     Click <button class="button is-link" href="/checkout">HERE</button> to take
     this art with you TODAY!
   </p>
-</div>
+</div> --}}
