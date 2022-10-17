@@ -68,11 +68,18 @@ router.get('/profile', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
     const artistData = await Artist.findAll({});
-    const artist = artistData.get({ plain: true });
+    const artists = artistData.map((artist) => artist.get({ plain: true }));
+
+    const heatData = await Heat.findAll({});
+    const heats = heatData.map((heat) => heat.get({ plain: true }));
+    console.log(artists);
+    console.log(heats);
 
     res.render('profile', {
       ...user,
-      artist,
+      artists,
+      heats,
+
       logged_in: true,
     });
   } catch (err) {
