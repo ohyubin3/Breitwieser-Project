@@ -42,15 +42,15 @@
   </div>
     <form class="card has-text-centered" id="submit-art">
       <div>
-        <label for="product-name">Name of the painting:</label>
+        <label for="product-name">Name of the painting  :</label>
         <input class="form-input" type="text" id="product-name" name="product-name" />
       </div>
       <div>
-        <label for="product-price">Price:</label>
+        <label for="product-price">Price  :</label>
         <input class="form-input" type="number" id="product-price" name="product-price" />
       </div>
       <div>
-        <label for="product-desc">description:</label>
+        <label for="product-desc">description  :</label>
         <textarea class="form-input" id="product-desc" name="product-desc"></textarea>
       </div>
       <div>
@@ -64,7 +64,7 @@
       </select>
       </div>
       <div>
-        <label for="artist_name">Name of the Artist  :</label>
+        <label for="heat_name">Heat Level  :</label>
        <select name="" id="heatDropdown">
       {{#each heats as |heat|}}
       <option value="{{heat.id}}">
@@ -73,8 +73,9 @@
       {{/each}}
       </select>
       </div>
+      <div value="{{user.id}}" id="user-id"></div>
       <div>
-        <label for="image-link">link to a picture of the artwork:</label>
+        <label for="image-link">link to a picture of the artwork  :</label>
         <textarea class="form-input" id="image-link" name="image-link"></textarea>
       </div>
     <div>
