@@ -54,6 +54,16 @@
         <textarea class="form-input" id="product-desc" name="product-desc"></textarea>
       </div>
       <div>
+        <label for="artist_name">Name of the Artist  :</label>
+     <select name="" id="artistDropdown">
+      {{#each artists as |artist|}}
+      <option value="{{artist.id}}">
+        {{artist.artist_name}}
+      </option>
+      {{/each}}
+      </select>
+      </div>
+      <div>
         <label for="image-link">link to a picture of the artwork:</label>
         <textarea class="form-input" id="image-link" name="image-link"></textarea>
       </div>
