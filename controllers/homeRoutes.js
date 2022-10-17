@@ -22,9 +22,9 @@ router.get('/', async (req, res) => {
     const products = productData.map((product) => product.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      products, 
-      logged_in: req.session.logged_in 
+    res.render('homepage', {
+      products,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -41,16 +41,16 @@ router.get('/products/:id', async (req, res) => {
         },
         {
           model: Heat,
-          through: ProductHeat
-        }
+          through: ProductHeat,
+        },
       ],
     });
 
     const product = productData.get({ plain: true });
-// console.log(product)
+    // console.log(product)
     res.render('product', {
       ...product,
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -67,10 +67,20 @@ router.get('/profile', withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
+    const artistData = await Artist.findAll({});
+    const artists = artistData.map((artist) => artist.get({ plain: true }));
+
+    const heatData = await Heat.findAll({});
+    const heats = heatData.map((heat) => heat.get({ plain: true }));
+    console.log(artists);
+    console.log(heats);
 
     res.render('profile', {
       ...user,
-      logged_in: true
+      artists,
+      heats,
+
+      logged_in: true,
     });
   } catch (err) {
     res.status(500).json(err);

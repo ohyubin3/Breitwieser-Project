@@ -4,15 +4,21 @@ const newFormHandler = async (event) => {
   const name = document.querySelector('#product-name').value.trim();
   const price = document.querySelector('#product-price').value.trim();
   const description = document.querySelector('#product-desc').value.trim();
+  const artist = document.querySelector('#artistDropdown').value.trim();
+  const heat = document.querySelector('#heatDropdown').value.trim();
+  const userID = document.querySelector('#user-id').value;
   const link = document.querySelector('#image-link').value.trim();
 
-  if (name && price && description) {
+  if (name && price && description && artist && heat && link) {
     const response = await fetch(`/api/products`, {
       method: 'POST',
       body: JSON.stringify({
         product_name: name,
         price: price,
         product_desc: description,
+        artist_id: artist,
+        heat_id: heat,
+        user_id: userID,
         image_link: link,
       }),
       headers: {
