@@ -40,7 +40,7 @@ const delButtonHandler = async (event) => {
 };
 
 document
-  .querySelector('.new-product-form')
+  .querySelectorAll('.container')
   .addEventListener('submit', newFormHandler);
 
 document
