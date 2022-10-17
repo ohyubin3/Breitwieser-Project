@@ -1,25 +1,30 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
-
   const name = document.querySelector('#product-name').value.trim();
-  const needed_funding = document.querySelector('#product-funding').value.trim();
+  const price = document.querySelector('#product-price').value.trim();
   const description = document.querySelector('#product-desc').value.trim();
+  const link = document.querySelector('#image-link').value.trim();
 
-  if (name && needed_funding && description) {
+  if (name && price && description) {
     const response = await fetch(`/api/products`, {
       method: 'POST',
-      body: JSON.stringify({ name, needed_funding, description }),
+      body: JSON.stringify({
+        product_name: name,
+        price: price,
+        product_desc: description,
+        image_link: link,
+      }),
       headers: {
         'Content-Type': 'application/json',
       },
     });
-
     if (response.ok) {
       document.location.replace('/profile');
     } else {
       alert('Failed to create product');
     }
+    console.log(response);
   }
 };
 
@@ -38,10 +43,9 @@ const delButtonHandler = async (event) => {
   }
 };
 
-
-// document
-//   .querySelectorAll('.container')
-//   .addEventListener('submit', newFormHandler);
+document
+  .querySelector('#submit-art')
+  .addEventListener('submit', newFormHandler);
 
 document
   .querySelector('.container')
