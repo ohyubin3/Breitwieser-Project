@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Product, User, Artist } = require('../models');
+const { Product, User, Artist, Heat, ProductHeat } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -31,7 +31,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/product/:id', async (req, res) => {
+router.get('/products/:id', async (req, res) => {
   try {
     const productData = await Product.findByPk(req.params.id, {
       include: [
@@ -39,11 +39,15 @@ router.get('/product/:id', async (req, res) => {
           model: User,
           attributes: ['name'],
         },
+        {
+          model: Heat,
+          through: ProductHeat
+        }
       ],
     });
 
     const product = productData.get({ plain: true });
-
+// console.log(product)
     res.render('product', {
       ...product,
       logged_in: req.session.logged_in
