@@ -1,16 +1,16 @@
-<div class='is-flex-direction-row has-text-success-dark'>
+<div class='is-flex-direction-row'>
   <div>
-    <h2 class='title mb-6 has-text-centered'>{{name}}'s totally legitimate art
+    <h2 class='title mb-6 has-text-success-dark has-text-centered'>{{name}}'s totally legitimate art
       dealings
     </h2>
   </div>
   {{#if products.length}}
-    <div class='has-text-success-dark container'>
-      <h3 class='title'>Current works for sale:</h3>
+    <div class='container'>
+      <h3 class='has-text-success-dark title'>Current works for sale:</h3>
 
       {{#each products as |product|}}
         <div class='card'>
-          <div class='is-flex-direction-column'>
+          <div class='has-text-success is-flex-direction-column'>
             <h3 class='title mb-2'>{{product.product_name}}</h3>
           </div>
           <img
@@ -37,8 +37,8 @@
 <br>
 <br>
 
-  <div class="has-text-success-dark container">
-    <h3 class="title mb-6 has-text-centered">Post your new "acquired" art for sale:</h3>
+  <div class="container">
+    <h3 class="has-text-success-dark title mb-6 has-text-centered">Post your new "acquired" art for sale:</h3>
   </div>
     <form class="card has-text-centered" id="submit-art">
       <div>
