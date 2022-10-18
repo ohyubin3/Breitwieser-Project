@@ -11,6 +11,7 @@
       {{#each products as |product|}}
         <div class='card'>
           <div class='column'>
+            <a href='/products/{{id}}'>
             <h3
               class='has-text-success-dark title mb-2'
             >{{product.product_name}}</h3>
@@ -20,6 +21,7 @@
             alt='{{product.product_name}}'
             srcset=''
           />
+          </a>
           <div>
             <button class='button is-link' data-id='{{product.id}}'>I'm keeping
               it</button>
