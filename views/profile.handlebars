@@ -5,12 +5,12 @@
     </h2>
   </div>
   {{#if products.length}}
-    <div class='container'>
       <h3 class='has-text-success-dark title'>Current works for sale:</h3>
+    <div class='container columns'>
 
       {{#each products as |product|}}
         <div class='card'>
-          <div class='is-flex-direction-column'>
+          <div class='column'>
             <h3
               class='has-text-success-dark title mb-2'
             >{{product.product_name}}</h3>
@@ -43,7 +43,7 @@
     <h3 class='has-text-success-dark title mb-6 has-text-centered'>Post your new
       "acquired" art for sale:</h3>
   </div>
-  <form class='has-text-centered' id='submit-art'>
+  <form class='has-text-centered mb-5' id='submit-art'>
     <div>
       <label class='has-text-success-dark' for='product-name'>Name of the
         painting:</label>
@@ -54,7 +54,7 @@
         name='product-name'
       />
     </div>
-    <div>
+    <div class="mt-2">
       <label class='has-text-success-dark' for='product-price'>Price:</label>
       <input
         class='form-input'
@@ -63,7 +63,7 @@
         name='product-price'
       />
     </div>
-    <div>
+    <div class="mt-2">
       <label
         class='has-text-success-dark'
         for='product-desc'
@@ -74,7 +74,7 @@
         name='product-desc'
       ></textarea>
     </div>
-    <div>
+    <div class="mt-2">
       <label class='has-text-success-dark' for='artist_name'>Name of the Artist:</label>
       <select name='' id='artistDropdown'>
         {{#each artists as |artist|}}
@@ -85,9 +85,9 @@
       </select>
     </div>
     <div value='{{id}}' id='user-id'></div>
-    <div>
+    <div class="mt-2">
       <label class='has-text-success-dark' for='image-link'>link to a picture of
-        the artwork :</label>
+        the artwork:</label>
       <textarea class='form-input' id='image-link' name='image-link'></textarea>
     </div>
     <div>
