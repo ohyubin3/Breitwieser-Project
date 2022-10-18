@@ -10,8 +10,8 @@
 
       {{#each products as |product|}}
         <div class='card'>
-          <div class='has-text-success is-flex-direction-column'>
-            <h3 class='title mb-2'>{{product.product_name}}</h3>
+          <div class='is-flex-direction-column'>
+            <h3 class='has-text-success-dark title mb-2'>{{product.product_name}}</h3>
           </div>
           <img
             src='{{product.image_link}}'
@@ -30,7 +30,6 @@
   {{! <div>
     <h3>Amount sold:</h3>
   </div> }}
-  {{! button to go to posting art page }}
 
 
 <br>
@@ -42,19 +41,19 @@
   </div>
     <form class="card has-text-centered" id="submit-art">
       <div>
-        <label for="product-name">Name of the painting  :</label>
+        <label class="has-text-success-dark" for="product-name">Name of the painting:</label>
         <input class="form-input" type="text" id="product-name" name="product-name" />
       </div>
       <div>
-        <label for="product-price">Price  :</label>
+        <label class="has-text-success-dark" for="product-price">Price:</label>
         <input class="form-input" type="number" id="product-price" name="product-price" />
       </div>
       <div>
-        <label for="product-desc">description  :</label>
+        <label class="has-text-success-dark" for="product-desc">description:</label>
         <textarea class="form-input" id="product-desc" name="product-desc"></textarea>
       </div>
       <div>
-        <label for="artist_name">Name of the Artist  :</label>
+        <label class="has-text-success-dark" for="artist_name">Name of the Artist:</label>
      <select name="" id="artistDropdown">
       {{#each artists as |artist|}}
       <option value="{{artist.id}}">
@@ -65,7 +64,7 @@
       </div>
       <div value="{{id}}" id="user-id"></div>
       <div>
-        <label for="image-link">link to a picture of the artwork  :</label>
+        <label class="has-text-success-dark" for="image-link">link to a picture of the artwork  :</label>
         <textarea class="form-input" id="image-link" name="image-link"></textarea>
       </div>
     <div>
